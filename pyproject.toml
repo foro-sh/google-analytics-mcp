@@ -1,0 +1,40 @@
+[project]
+name = "google-analytics-mcp"
+version = "0.1.0"
+description = "Google's Google Analytics MCP server behind foro.sh's gate: read-only, signed in per user, EU-hosted"
+requires-python = ">=3.12"
+dependencies = [
+    # Google's server, unchanged. The upstream sync bumps it with [tool.foro.upstream].
+    "analytics-mcp==1.1.0",
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.17.1",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.foro]
+# package.json is only semantic-release tooling; this file is the MCP server.
+runtime = "python"
+
+[tool.foro.upstream]
+repo = "https://github.com/googleanalytics/google-analytics-mcp"
+source = "pypi"
+package = "analytics-mcp"
+version = "1.1.0"
+license = "Apache-2.0"

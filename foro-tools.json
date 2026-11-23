@@ -1,0 +1,64 @@
+{
+  "tools": [
+    {
+      "name": "get_account_summaries",
+      "label": "List accounts and properties",
+      "description": "Retrieves information about the user's Google Analytics accounts and properties.",
+      "writes": false
+    },
+    {
+      "name": "list_google_ads_links",
+      "label": "List Google Ads links",
+      "description": "Returns a list of links to Google Ads accounts for a property.",
+      "writes": false
+    },
+    {
+      "name": "get_property_details",
+      "label": "Read property details",
+      "description": "Returns details about a property.",
+      "writes": false
+    },
+    {
+      "name": "list_property_annotations",
+      "label": "List annotations",
+      "description": "Returns annotations for a property.",
+      "writes": false
+    },
+    {
+      "name": "list_key_events",
+      "label": "List key events",
+      "description": "Returns the key events (formerly conversions) defined on a property.",
+      "writes": false
+    },
+    {
+      "name": "get_custom_dimensions_and_metrics",
+      "label": "List custom dimensions and metrics",
+      "description": "Returns the property's custom dimensions and metrics.",
+      "writes": false
+    },
+    {
+      "name": "run_report",
+      "label": "Run a report",
+      "description": "Runs a Google Analytics Data API report.",
+      "writes": false
+    },
+    {
+      "name": "run_realtime_report",
+      "label": "Run a realtime report",
+      "description": "Runs a Google Analytics Data API realtime report.",
+      "writes": false
+    },
+    {
+      "name": "run_funnel_report",
+      "label": "Run a funnel report",
+      "description": "Run a Google Analytics Data API funnel report.",
+      "writes": false
+    },
+    {
+      "name": "run_conversions_report",
+      "label": "Run a conversions report",
+      "description": "Runs a Google Analytics Data API conversions report.",
+      "writes": false
+    }
+  ]
+}

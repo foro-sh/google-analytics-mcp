@@ -1,0 +1,14 @@
+name: Upstream sync
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+jobs:
+  sync:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: foro-sh/platform/.github/workflows/blueprint-sync.yml@main
+    with:
+      smoke-command: ./smoke.sh
+      version-files: pyproject.toml

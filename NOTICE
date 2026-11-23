@@ -1,0 +1,15 @@
+google-analytics-mcp
+Copyright 2026 foro.sh
+
+This product serves Google's Google Analytics MCP server, analytics-mcp
+(https://github.com/googleanalytics/google-analytics-mcp), Copyright 2025
+Google LLC, licensed under the Apache License, Version 2.0. Google is not
+affiliated with foro.sh, and this server is not a Google product.
+
+What foro.sh changed, without modifying Google's code:
+
+- The server runs in Google's own streamable HTTP mode, read-only (no
+  --allow-write), so its write tools are not served (server.py).
+- Google sign-in and token refresh are foro.sh's: each tool call gets the
+  caller's Google access token from foro's upstream broker (broker.py) instead
+  of Application Default Credentials or the server's own OAuth.
