@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "sh.foro/google-analytics",
+  "title": "Google Analytics",
+  "description": "Google's own Analytics MCP server, hosted by foro: GA4 accounts, properties and reports. Read-only.",
+  "version": "0.1.0",
+  "websiteUrl": "https://docs.foro.sh/google-analytics",
+  "repository": {
+    "url": "https://github.com/foro-sh/google-analytics-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://{slug}.foro.sh/mcp",
+      "variables": {
+        "slug": {
+          "description": "Your server's slug, shown after you set up the Google Analytics blueprint on foro",
+          "isRequired": true
+        }
+      }
+    }
+  ]
+}
